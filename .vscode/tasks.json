@@ -10,9 +10,23 @@
                 "context": "backend/store-service",
                 "buildArgs": {},
                 "dockerfile": "backend/store-service/Dockerfile",
-                "labels": { "henkels-have-to": "true" },
-                "tag": "jjhenkel/henkels-have-to-backend:latest",
+                "labels": {
+                    "henkels-have-to": "true"
+                },
+                "tag": "jjhenkel/henkels-have-to-backend:latest"
             }
+        },
+        {
+            "label": "publish-backend-store-service",
+            "type": "process",
+            "command": "C:\\Windows\\System32\\wsl.exe",
+            "args": [
+                "--",
+                "bash",
+                "-ic",
+                "docker push jjhenkel/henkels-have-to-backend:latest"
+            ],
+            "problemMatcher": []
         }
     ]
 }
